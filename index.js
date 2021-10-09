@@ -11,6 +11,16 @@ client.on('messageCreate', msg => {
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`)
+	client.user.setPresence({
+		activities: [
+			{
+				name: 'your messages',
+				type: 'WATCHING'
+			}
+		],
+		status: 'idle',
+		afk: true
+	})
 })
 
 client.login(config.bot_token)
