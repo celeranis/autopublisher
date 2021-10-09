@@ -4,7 +4,6 @@ const client = new disc.Client({intents: ['GUILD_MESSAGES', 'GUILDS']})
 const config = require('./config.json')
 
 client.on('messageCreate', msg => {
-	console.log(msg.content, msg.crosspostable, msg.author.bot)
 	if (msg.crosspostable && msg.author.bot) {
 		msg.crosspost()
 	}
