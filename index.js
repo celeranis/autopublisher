@@ -5,7 +5,9 @@ const config = require('./config.json')
 
 client.on('messageCreate', msg => {
 	if (msg.crosspostable && msg.author.bot) {
-		msg.crosspost()
+		msg.crosspost().catch(err => {
+			console.warn(`Failed to crosspost: ${err.message}`)
+		})
 	}
 })
 
