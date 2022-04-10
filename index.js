@@ -1,7 +1,16 @@
-const disc = require('discord.js')
-const client = new disc.Client({intents: ['GUILD_MESSAGES', 'GUILDS']})
+const { Client } = require('discord.js')
 
-const config = require('./config.json')
+if (!process.env.DISCORD_TOKEN) {
+	require('dotenv').config()
+}
+
+const client = new Client({
+	intents: ['GUILD_MESSAGES', 'GUILDS'], 
+	partials: ['MESSAGE', 'GUILD_MEMBER', 'USER'],
+	presence: {
+		status: 'idle'
+	}
+})
 
 client.on('messageCreate', msg => {
 	if (msg.crosspostable && msg.author.bot) {
@@ -13,16 +22,6 @@ client.on('messageCreate', msg => {
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`)
-	client.user.setPresence({
-		activities: [
-			{
-				name: 'your messages',
-				type: 'WATCHING'
-			}
-		],
-		status: 'idle',
-		afk: true
-	})
 })
 
-client.login(config.bot_token)
+client.login() // uses DISCORD_TOKEN environment variable by default
