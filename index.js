@@ -25,4 +25,4 @@ client.on('ready', () => {
 	})
 })
 
-client.login(config.bot_token)
+client.login() // uses DISCORD_TOKEN environment variable by default

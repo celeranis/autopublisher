@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/celeranis/autopublisher#readme",
   "dependencies": {
-    "discord.js": "^13.2.0"
+		"discord.js": "^13.6.0"
+	},
+	"optionalDependencies": {
+		"dotenv": "^16.0.0"
   }
 }
