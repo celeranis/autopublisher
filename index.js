@@ -1,4 +1,9 @@
 const { Client } = require('discord.js')
+
+if (!process.env.DISCORD_TOKEN) {
+	require('dotenv').config()
+}
+
 const client = new Client({
 	intents: ['GUILD_MESSAGES', 'GUILDS'], 
 	partials: ['MESSAGE', 'GUILD_MEMBER', 'USER'],
@@ -18,9 +23,5 @@ client.on('messageCreate', msg => {
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`)
 })
-
-if (!process.env.DISCORD_TOKEN) {
-	require('dotenv').config()
-}
 
 client.login() // uses DISCORD_TOKEN environment variable by default
