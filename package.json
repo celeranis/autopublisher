@@ -1,26 +1,26 @@
 {
-  "name": "autopublisher",
-  "version": "1.0.0",
-  "description": "Automatically publishes new bot/webhook messages to announcement channels.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node index --unhandled-rejections=warn"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/celeranis/autopublisher.git"
-  },
-  "author": "celeranis",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/celeranis/autopublisher/issues"
-  },
-  "homepage": "https://github.com/celeranis/autopublisher#readme",
-  "dependencies": {
+	"name": "autopublisher",
+	"version": "1.1.0",
+	"description": "Automatically publishes new bot/webhook messages to announcement channels.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index --unhandled-rejections=warn"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/celeranis/autopublisher.git"
+	},
+	"author": "celeranis",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/celeranis/autopublisher/issues"
+	},
+	"homepage": "https://github.com/celeranis/autopublisher#readme",
+	"dependencies": {
 		"discord.js": "^13.6.0"
 	},
 	"optionalDependencies": {
 		"dotenv": "^16.0.0"
-  }
+	}
 }
