@@ -1,5 +1,6 @@
 {
 	"name": "autopublisher",
+	"private": true,
 	"version": "1.1.0",
 	"description": "Automatically publishes new bot/webhook messages to announcement channels.",
 	"main": "index.js",
