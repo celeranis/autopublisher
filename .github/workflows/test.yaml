@@ -1,0 +1,66 @@
+name: Testing
+
+permissions:
+  contents: read
+  pull-requests: read
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+  
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+  
+  workflow_dispatch:
+    inputs:
+      unfreeze-lockfile:
+        default: false
+        type: boolean
+        description: Unfreeze pnpm lockfile
+        required: false
+      node-version:
+        default: '18.x'
+        type: string
+        description: Node.js version
+        required: false
+      pnpm-version:
+        default: '7.0.0-rc.8'
+        type: string
+        description: pnpm version
+        required: false
+
+jobs:
+  test:
+    name: Linting & Testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ github.event.inputs.pnpm-version || '7.0.0-rc.8' }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ github.event.inputs.node-version || '18.x' }}
+          cache: 'pnpm'
+
+        # https://github.com/dependabot/dependabot-core/issues/1736
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Run lints
+        run: pnpm lint
