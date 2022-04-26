@@ -17,4 +17,5 @@ client.on('warn', console.warn)
 
 client.login() // uses DISCORD_TOKEN environment variable by default
 
+export const { handleMessage, init } = autopublisher;
 export default client;
