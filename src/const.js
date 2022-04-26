@@ -6,7 +6,7 @@ import { Options } from 'discord.js';
 
 /** @type {ClientOptions} */
 export const clientOptions = {
-	intents: ['GUILD_MESSAGES', 'GUILDS'], 
+	intents: ['GUILD_MESSAGES', 'GUILDS'],
 	partials: ['MESSAGE', 'GUILD_MEMBER', 'USER'],
 	presence: {
 		status: 'idle'
@@ -30,9 +30,10 @@ export const clientOptions = {
 		UserManager: 0,
 		VoiceStateManager: 0
 	}),
+	// remove old messages from the cache
 	sweepers: {
 		messages: {
-			filter: () => (msg) => !msg.crosspostable,
+			filter: () => msg => !msg.crosspostable,
 			interval: 600
 		}
 	}

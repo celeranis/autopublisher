@@ -13,6 +13,7 @@
 	"scripts": {
 		"test": "pnpm test:typescript",
 		"test:typescript": "tsc --noEmit",
+		"lint": "eslint src",
 		"start": "node ./src/index.js"
 	},
 	"repository": "celeranis/autopublisher",
@@ -30,6 +31,8 @@
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.27",
+		"eslint": "^8.14.0",
+		"eslint-config-xo": "^0.40.0",
 		"typescript": "4.7.0-dev.20220426"
 	},
 	"packageManager": "pnpm@7.0.0-rc.8",
