@@ -3,18 +3,19 @@
 	"private": true,
 	"version": "2.0.0",
 	"description": "Automatically publishes new bot/webhook messages to announcement channels.",
-	"main": "./src/index.js",
 	"exports": {
-		".": "./src/index.js",
+		".": "./src/standalone.js",
+		"./standalone": "./src/standalone.js",
 		"./module": "./src/module.js",
 		"./const": "./src/const.js"
 	},
-	"bin": "./src/index.js",
+	"main": "./src/standalone.js",
+	"bin": "./src/standalone.js",
 	"scripts": {
 		"test": "pnpm test:typescript",
 		"test:typescript": "tsc --noEmit",
 		"lint": "eslint src",
-		"start": "node ./src/index.js"
+		"start": "node ./src/standalone.js"
 	},
 	"repository": "celeranis/autopublisher",
 	"author": "celeranis",

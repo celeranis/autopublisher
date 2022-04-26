@@ -13,6 +13,8 @@ client.on('ready', client => {
 	autopublisher.init(client)
 })
 
+client.on('warn', console.warn)
+
 client.login() // uses DISCORD_TOKEN environment variable by default
 
 export default client;
