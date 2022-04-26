@@ -1,17 +1,20 @@
 {
 	"name": "autopublisher",
 	"private": true,
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"description": "Automatically publishes new bot/webhook messages to announcement channels.",
-	"main": "index.js",
+	"main": "./src/index.js",
+	"exports": {
+		".": "./src/index.js",
+		"./module": "./src/module.js",
+		"./const": "./src/const.js"
+	},
+	"bin": "./src/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index --unhandled-rejections=warn"
+		"start": "node ./src/index.js"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/celeranis/autopublisher.git"
-	},
+	"repository": "celeranis/autopublisher",
 	"author": "celeranis",
 	"license": "MIT",
 	"bugs": {
@@ -23,5 +26,10 @@
 	},
 	"optionalDependencies": {
 		"dotenv": "^16.0.0"
-	}
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.27"
+	},
+	"packageManager": "pnpm@7.0.0-rc.8",
+	"type": "module"
 }
