@@ -41,5 +41,8 @@
 		"typescript": "4.7.0-dev.20220426"
 	},
 	"packageManager": "pnpm@7.0.0-rc.8",
-	"type": "module"
+	"type": "module",
+	"engines": {
+		"node": ">=16.9.0"
+	}
 }
