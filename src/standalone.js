@@ -11,6 +11,10 @@ const client = new Client(clientOptions)
 client.on('ready', client => {
 	console.log('Logged in as %s', client.user.tag)
 	autopublisher.init(client)
+	
+	if (process?.send) {
+		process.send('ready') // sends a ready event to pm2, if available
+	}
 })
 
 client.on('warn', console.warn)

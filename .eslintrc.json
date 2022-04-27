@@ -21,6 +21,8 @@
 			"skipBlankLines": true
 		}],
 		"arrow-parens": "warn",
-		"no-void": "off"
+		"no-void": "off",
+		"camelcase": "off",
+		"eqeqeq": "off"
     }
 }
