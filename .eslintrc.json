@@ -1,0 +1,28 @@
+{
+    "env": {
+        "es2022": true,
+        "node": true
+    },
+    "extends": [
+        "xo"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+		"object-curly-spacing": "off",
+		"semi": ["off", { "beforeStatementContinuationChars": "always" }],
+		"capitalized-comments": "off",
+		"eol-last": "off",
+		"comma-dangle": "off",
+		"no-trailing-spaces": ["warn", {
+			"ignoreComments": true,
+			"skipBlankLines": true
+		}],
+		"arrow-parens": "warn",
+		"no-void": "off",
+		"camelcase": "off",
+		"eqeqeq": "off"
+    }
+}

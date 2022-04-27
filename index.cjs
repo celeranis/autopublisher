@@ -6,4 +6,4 @@
 	with `pnpm start` (or the pm2 ecosystem file) instead.
 */
 
-export * from './src/standalone.js';
+import('./src/standalone.js')
