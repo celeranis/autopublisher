@@ -5,6 +5,7 @@ module.exports = {
 	apps: [{
 		name: 'autopublisher',
 		script: './src/standalone.js',
+		cwd: './',
 		max_memory_restart: '150M', // automatically restart the bot if memory usage exceeds 150 MB
 		post_update: ['pnpm install'], // commands to run after an update
 		

@@ -26,3 +26,7 @@ jspm_packages/
 
 # Build outputs
 dist/
+
+# Other package managers
+package-lock.json
+yarn.lock
