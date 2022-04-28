@@ -74,8 +74,6 @@ import autopublisher from 'autopublisher/module';
 
 autopublisher.init(client)
 ```
-> ℹ️ Keep in mind that this behavior is not *fully* supported
-> and may be removed in v3.0.0
 
 ### Updating the bot
 
