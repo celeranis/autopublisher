@@ -8,7 +8,7 @@ specifiers:
   erlpack: ^0.1.4
   eslint: ^8.14.0
   eslint-config-xo: ^0.40.0
-  typescript: 4.7.0-dev.20220426
+  typescript: 4.7.0-dev.20220427
   utf-8-validate: ^5.0.9
   zlib-sync: ^0.1.7
 
@@ -26,7 +26,7 @@ devDependencies:
   '@types/node': 17.0.27
   eslint: 8.14.0
   eslint-config-xo: 0.40.0_eslint@8.14.0
-  typescript: 4.7.0-dev.20220426
+  typescript: 4.7.0-dev.20220427
 
 packages:
 
@@ -744,8 +744,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /typescript/4.7.0-dev.20220426:
-    resolution: {integrity: sha512-Kp2HY+EFd3ohtistJ+C4Px4esymoC90SFH9/aNOhD7pyoan9DSRmzcqOgN6zdwbSH4T1Riju+p6Flc1VnVlhrg==}
+  /typescript/4.7.0-dev.20220427:
+    resolution: {integrity: sha512-hF8uZdb8/p4O+U6fl1J+H1sMlu/IW+GAoRDWXKjAjTVilit2Su4jJQxlP962nDkE5uu+VJPRrqESdusNxuberw==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
