@@ -24,11 +24,6 @@ on:
         type: string
         description: Node.js version
         required: false
-      pnpm-version:
-        default: '7.0.0-rc.9'
-        type: string
-        description: pnpm version
-        required: false
 
 jobs:
   test:
@@ -42,7 +37,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: ${{ github.event.inputs.pnpm-version || '7.0.0-rc.9' }}
+          version: ^7.0.0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -51,11 +46,11 @@ jobs:
           cache: 'pnpm'
 
         # https://github.com/dependabot/dependabot-core/issues/1736
-      - name: Install dependencies
+      - name: Dependency installation
         run: pnpm install
 
       - name: Type checking
         run: pnpm test
 
-      - name: Run lints
+      - name: Linting
         run: pnpm lint
