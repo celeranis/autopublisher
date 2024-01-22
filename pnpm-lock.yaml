@@ -4,7 +4,7 @@ specifiers:
   '@types/node': ^17.0.30
   bufferutil: ^4.0.6
   discord.js: ^13.6.0
-  dotenv: ^16.0.0
+  dotenv: ^16.3.2
   erlpack: ^0.1.4
   eslint: ^8.14.0
   eslint-config-xo: ^0.40.0
@@ -17,7 +17,7 @@ dependencies:
 
 optionalDependencies:
   bufferutil: 4.0.6
-  dotenv: 16.0.0
+  dotenv: 16.3.2
   erlpack: 0.1.4
   utf-8-validate: 5.0.9
   zlib-sync: 0.1.7
@@ -274,8 +274,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dotenv/16.0.0:
-    resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
+  /dotenv/16.3.2:
+    resolution: {integrity: sha512-HTlk5nmhkm8F6JcdXvHIzaorzCoziNQT9mGxLPVXW8wJF1TiGSL60ZGB4gHWabHOaMmWmhvk2/lPHfnBiT78AQ==}
     engines: {node: '>=12'}
     requiresBuild: true
     dev: false
